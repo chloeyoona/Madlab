@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=4.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles/00-style.css">
+</head>
+
+<style>
+    html {
+        background-color: rgb(241, 185, 246);
+    }
+    body {
+        background-color: rgb(177, 205, 221);
+        width: 1000px;
+        margin: 300 auto;
+        font-size: 200px;
+    }
+  
+    
+</style>
+<body>
+    <form id="formData" onsubmit="event.preventDefault();">
+            <legend>Javascript Mad Libs</legend>
+            <label>Plural Noun 1: </label><input type="text" name="pluralnoun1" class = "PluralNoun1"><br>
+            <label>Adjective: </label><input type="text" name="adjective" class = "Adjective"><br>
+            <label>Plural Noun 2: </label><input type="text" name="pluralnoun2" class = "PluralNoun2"><br>
+            <label>Vacation Spot: </label><input type="text" name="vacationspot" class = "VacationSpot"><br>
+            <label>Favorite Color: </label><input type="text" name="favoritecolor" class = "FavoriteColor"><br>
+            <label>Hobby 1: </label><input type="text" name="hobby1" class = "Hobby1"><br>
+            <label>Hobby 2: </label><input type="text" name="hobby2" class = "Hobby2"><br>
+            <label>Verb: </label><input type="text" name="verb" class = "Verb"><br>
+            <label>Weakness: </label><input type="text" name="verb" class = "Weakness"><br>
+
+
+            <button id="submit">Submit</button> 
+    </form>
+    <div id = "content"></div>
+
+<script type="text/javascript">
+    
+    function goMadLib() {
+        let formData = document.getElementById("formData").value;
+        let PluralNoun1 = document.querySelector(".PluralNoun1").value;
+        let Adjective = document.querySelector(".Adjective").value;
+        let Hobby1 = document.querySelector(".Hobby1").value;
+        let Hobby2 = document.querySelector(".Hobby2").value;
+        let Verb = document.querySelector(".Verb").value;
+        let PluralNoun2 = document.querySelector(".PluralNoun2").value;
+        let VacationSpot = document.querySelector(".VacationSpot").value;
+        let FavoriteColor = document.querySelector(".FavoriteColor").value;
+        let Weakness = document.querySelector(".Weakness").value;
+        let newContent = "At Bergen County Academies, " + PluralNoun1 + " is a(n) " + Adjective + " student who loves to " + Hobby1 + " and " + Hobby2 + ". " + " Ever since they were young, they have always loved to " + Verb + "with " + PluralNoun2 + "at " + VacationSpot + ". At BCA, something they struggle with most is " + Weakness + ". Due to the high standards and curriculum at BCA, many students face this issue.";
+     
+        document.getElementById("content").innerHTML = newContent;
+
+    }
+
+    let submitBtn = document.getElementById("submit");
+submitBtn.addEventListener("click", goMadLib);
+    
+</script>
+</body> 
+</html> 
+   
